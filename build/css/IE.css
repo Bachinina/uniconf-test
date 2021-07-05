@@ -1,0 +1,11 @@
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+  .form::before {
+    display: none;
+  }
+
+  .nav__drop-list a::after,
+  .nav__list a::after {
+    display: none;
+  }
+}

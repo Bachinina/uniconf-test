@@ -1,0 +1,111 @@
+.header__top {
+  background-color: $color-gray-blue;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 11px 0;
+
+  a {
+    @extend %link-black;
+  }
+
+  @media (max-width: $xl) {
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+}
+
+.header__container {
+  display: flex;
+}
+
+.header__right {
+  margin-left: auto;
+}
+
+.header__nav-btn {
+  @extend %btn-def;
+  display: none;
+  width: 30px;
+  height: 30px;
+  background-image: url(../../img/burger.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &.active {
+    background-image: url(../../img/close.svg);
+
+    &+.header__nav-wrap {
+      transform: translateX(0);
+    }
+  }
+
+  @media (max-width: $xl) {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+.header__nav {
+  position: relative;
+  background-color: $color-white;
+  width: 100%;
+  box-shadow: 0px 3px 6px #00000029;
+
+  display: flex;
+  flex-direction: column;
+
+  .header__container {
+    padding-top: 45px;
+    padding-bottom: 30px;
+
+    @media (max-width: $xl) {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      align-items: center;
+    }
+  }
+
+  @media (max-width: $xl) {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+  }
+
+  &.fixed {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+  }
+}
+
+
+.header__nav-wrap {
+  transition: $trans-delay;
+  margin-left: auto;
+  flex-grow: 1;
+
+  a {
+    @extend %link-black;
+  }
+
+  @media (max-width: $xl) {
+    transform: translateX(-100%);
+    position: fixed;
+    top: 60px;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: calc(100% - 60px);
+    background-color: $color-white;
+    overflow: hidden;
+  }
+}
+
+.header__logo {
+  margin-right: 140px;
+
+  @media (max-width: $xxl) {
+    margin-right: 60px;
+  }
+}

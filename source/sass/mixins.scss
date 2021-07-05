@@ -1,0 +1,103 @@
+%list-style {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+%link-default {
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &.active {
+    text-decoration: none;
+  }
+}
+
+%link-black {
+  color: $color-black;
+  font-weight: 400;
+
+  &:hover,
+  &:focus,
+  &.active {
+    text-shadow: 1px 0 0 $color-black;
+  }
+}
+
+%link-blue {
+  color: $color-blue;
+  text-decoration: underline;
+  text-decoration-color: $color-blue;
+
+  &:hover,
+  &:focus,
+  &.active {
+    text-decoration-color: transparent;
+  }
+}
+
+%link-black-blue {
+  color: $color-black;
+
+  svg {
+    transition: $trans-delay;
+    fill: $color-black;
+  }
+
+  &:hover,
+  &:focus,
+  &.active {
+    color: $color-blue;
+
+    svg {
+      fill: $color-blue;
+    }
+  }
+
+
+}
+
+%link-underline-on-hover {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background-color: $color-black;
+    transition: $trans-delay;
+  }
+
+  &:hover,
+  &:focus,
+  &.active {
+    &::after {
+      width: 100%;
+      font-weight: 600;
+    }
+  }
+}
+
+
+%visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+%disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}

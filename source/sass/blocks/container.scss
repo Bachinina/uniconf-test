@@ -1,0 +1,14 @@
+.container--content {
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+  @media (max-width: $lg) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: $md) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}

@@ -1,0 +1,8 @@
+.contacts {
+  @extend %list-style;
+
+  a {
+    color: $color-black;
+    font-weight: 700;
+  }
+}

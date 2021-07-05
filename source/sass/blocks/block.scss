@@ -1,0 +1,31 @@
+.block__top {
+  @media (min-width: $md + 1) {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+
+    >* {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+
+.block__top-link {
+  flex-shrink: 0;
+  margin-left: 15px;
+
+  @extend %link-black-blue;
+
+  @media (max-width: $md) {
+    display: none;
+  }
+}
+
+.block__title {
+  @media (max-width: $md) {
+    text-align: center;
+  }
+}

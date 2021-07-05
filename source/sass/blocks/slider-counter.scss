@@ -1,0 +1,82 @@
+.slider-counter__control-container {
+  position: relative;
+}
+
+.slider-counter__control {
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 30px);
+
+  @media (max-width: $lg) {
+    padding-bottom: 20px;
+  }
+
+  @media (max-width: $md) {
+    padding-bottom: 12px;
+  }
+
+  .slick-dots {
+    order: 2;
+  }
+
+  .slider-btn {
+    @extend %btn-def;
+
+    svg {
+      width: 32px;
+      height: 22px;
+      transition: $trans-delay;
+      fill: $color-white;
+
+      @media (max-width: $md) {
+        width: 18px;
+        height: 13px;
+      }
+    }
+
+    &.prev {
+      order: 1;
+    }
+
+    &.next {
+      order: 3;
+    }
+
+    &:hover,
+    &:focus,
+    &.active {
+      svg {
+        fill: $color-blue;
+      }
+    }
+  }
+
+  .slider-pag {
+    width: 70px;
+
+    @media (max-width: $lg) {
+      width: 40px;
+    }
+
+    @media (max-width: $md) {
+      width: 30px;
+    }
+  }
+
+  .slick-dots>*+* {
+    margin-left: 30px;
+
+    @media (max-width: $lg) {
+      margin-left: 20px;
+    }
+
+    @media (max-width: $md) {
+      margin-left: 12px;
+
+    }
+  }
+
+}

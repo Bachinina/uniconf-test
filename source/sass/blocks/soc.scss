@@ -1,0 +1,24 @@
+.soc {
+  @extend %list-style;
+  display: flex;
+
+  li:not(:last-of-type) {
+    margin-right: 12px;
+  }
+
+  svg {
+    transition: $trans-delay;
+    fill: $color-blue;
+  }
+
+  a {
+
+    &:hover,
+    &:focus,
+    &.active {
+      svg {
+        fill: $color-dark-blue;
+      }
+    }
+  }
+}

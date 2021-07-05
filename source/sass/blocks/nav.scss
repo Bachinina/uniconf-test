@@ -1,0 +1,159 @@
+.nav {
+  display: flex;
+  position: relative;
+
+  @media (max-width: $xl) {
+    font-size: 16px;
+  }
+}
+
+.nav__list,
+.nav__drop-list {
+  @extend %list-style;
+}
+
+.nav__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: $xl) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.nav__drop-list,
+.nav__list {
+
+  a {
+    @extend %link-underline-on-hover;
+  }
+}
+
+.nav__wrap {
+  display: flex;
+
+  @media (min-width: $xl + 1) {
+    max-width: none;
+    padding: 0;
+  }
+
+  @media (max-width: $xl) {
+    height: 100%;
+    flex-direction: column;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    overflow-y: auto;
+  }
+}
+
+
+.nav__log {
+  display: flex;
+  margin-left: auto;
+
+  @media (max-width: $xl) {
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
+  }
+}
+
+.nav__wrap {
+  width: 100%;
+}
+
+.nav__item {
+  margin: 0 30px;
+
+  @media (max-width: $xl) {
+    margin: 0;
+    margin-bottom: 25px;
+  }
+}
+
+
+.nav__drop-menu {
+  &::before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 100vw;
+    left: 0;
+    height: 120px;
+    background-color: $color-white;
+    z-index: -1;
+    box-shadow: 0 3px 6px #00000029;
+  }
+}
+
+.nav__drop-list {
+  flex-wrap: wrap;
+  max-width: calc(400px + 40px);
+  display: none;
+  padding-top: 30px;
+  padding-bottom: 15px;
+
+  &.active {
+    display: flex;
+  }
+}
+
+.nav__drop-wrap {
+  border-top: 1px solid $color-light-gray;
+}
+
+.nav__drop-item {
+  margin-right: 40px;
+  margin-bottom: 15px;
+
+  a {
+    @extend %link-black;
+    font-size: 14px;
+  }
+}
+
+.nav__drop-menu {
+  position: absolute;
+  width: 100%;
+  display: none;
+  top: 100%;
+  z-index: 101;
+  background-color: $color-white;
+
+  &.active {
+    display: block;
+  }
+}
+
+
+.nav__log-el {
+  &+* {
+    margin-left: 25px;
+
+    @media (max-width: $xl) {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  }
+
+  @media (max-width: $xl) {
+    &:not(.mob) {
+      font-weight: 700;
+    }
+  }
+
+
+  &.mob {
+    margin-top: 40px;
+
+    &+.mob {
+      margin-top: 10px;
+    }
+
+    @media (min-width: $xl + 1) {
+      display: none;
+    }
+  }
+}

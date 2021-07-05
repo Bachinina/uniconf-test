@@ -1,0 +1,85 @@
+// DEFAULT BUTTON STYLES
+%btn-def {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  color: inherit;
+  font-size: 1rem;
+  transition: $trans-delay;
+
+  &:hover,
+  &:focus {
+    transition: $trans-delay;
+  }
+
+  &:disabled,
+  &.disabled {
+    @extend %disabled;
+  }
+}
+
+.btn {
+  @extend %btn-def;
+}
+
+.btn-text {
+  text-transform: uppercase;
+  font-weight: 600;
+  @extend %link-black-blue;
+
+  *+svg {
+    margin-left: 16px;
+  }
+
+  svg+* {
+    margin-right: 16px;
+  }
+
+  @media (max-width: $md) {
+    font-size: 10px;
+
+    *+svg {
+      margin-left: 5px;
+    }
+
+    svg+* {
+      margin-right: 5px;
+    }
+
+  }
+}
+
+.btn-more {
+  @media (min-width: $xl + 1) {
+
+    &:hover,
+    &:focus {
+      svg {
+        animation: shake 0.6s;
+      }
+    }
+  }
+
+}
+
+.btn-blue {
+  background-color: $color-blue;
+  color: $color-white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  justify-content: center;
+
+  &:hover,
+  &:focus,
+  &.active {
+    background-color: $color-dark-blue;
+  }
+}

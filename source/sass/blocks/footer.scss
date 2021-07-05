@@ -1,0 +1,188 @@
+.footer {
+  font-size: 14px;
+  margin-top: auto;
+
+}
+
+.footer__top {
+  background-color: $color-gray-blue;
+  padding: 30px 0;
+
+  @media (max-width: $md) {
+    padding: 20px 0;
+
+  }
+}
+
+
+.footer__head {
+  margin-bottom: 20px;
+
+  @media (max-width: $md) {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+}
+
+.footer__text {
+  font-style: normal;
+  margin-bottom: 20px;
+}
+
+.footer__column {
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: $xl) {
+    margin-bottom: 25px;
+  }
+
+  @media (max-width: $md) {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+.footer__contacts {
+  margin-top: auto;
+}
+
+.footer__menu {
+  @extend %list-style;
+  display: flex;
+  flex-wrap: wrap;
+
+  a {
+    @extend %link-black;
+  }
+
+  li:not(:last-of-type) {
+    margin-right: 24px;
+  }
+
+  li {
+    margin-bottom: 10px;
+  }
+}
+
+.footer__row {
+  margin-top: 25px;
+}
+
+.footer__form {
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: $md) {
+    align-items: center;
+  }
+
+  input,
+  button {
+    padding: 8px 15px !important;
+    border: none !important;
+  }
+
+  input {
+    flex-grow: 1;
+    max-width: 290px;
+    background-color: #F7F7F7;
+    margin-right: 10px;
+  }
+
+  button {
+    min-width: 70px;
+  }
+
+  .form-success {
+    margin-top: 8px;
+    font-size: 10px;
+  }
+}
+
+.footer__copy {
+  @media (max-width: $md) {
+    display: none;
+  }
+}
+
+.footer__form-container {
+  display: flex;
+
+  @media (max-width: $md) {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.footer__title {
+  margin-bottom: 10px;
+
+  @media (max-width: $md) {
+    margin-bottom: 15px;
+    text-align: center;
+
+
+  }
+}
+
+.footer__bottom {
+  color: $color-gray-blue;
+  padding: 22px 0;
+  font-size: 12px;
+  line-height: 15px;
+
+  background-color: $color-dark-blue;
+
+  @media (max-width: $md) {
+    padding: 20px 0;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $md) {
+      justify-content: center;
+    }
+  }
+
+  .footer__menu {
+    li {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: $color-gray-blue;
+    }
+  }
+}
+
+.footer__nav {
+  .footer__menu {
+    @media (max-width: $md) {
+      flex-direction: column;
+      align-items: center;
+
+      li {
+        margin: 0;
+        margin-bottom: 7px;
+      }
+    }
+  }
+}
+
+.footer__soc {
+  @media (max-width: $md) {
+    justify-content: center;
+
+    svg {
+      width: 25px;
+      height: 25px;
+    }
+
+    li:not(:last-of-type) {
+      margin-right: 15px;
+    }
+  }
+}

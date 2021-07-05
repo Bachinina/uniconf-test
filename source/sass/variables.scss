@@ -1,0 +1,124 @@
+// COLORS
+$color-white: #ffffff;
+$color-black: #1d1d1f;
+$color-gray-blue: #DCE5E9;
+$color-gray: #BBBBBB;
+$color-light-gray: #BBBBBB;
+$color-light-gray2: #F7F7F7;
+$color-blue: #14A5DA;
+$color-dark-blue: #001F2B;
+$color-light-blue: #14A5DA1F;
+$color-orange: #E76400;
+
+// SCREEN
+$sm: 576px - 1px;
+$md: 768px - 1px;
+$lg: 992px - 1px;
+$xl: 1200px - 1px;
+$xxl: 1400px - 1px;
+
+// TRANSITION
+$trans-delay: 0.3s;
+
+// FONTS
+html {
+  font-size: 16px;
+
+  @media (max-width: $md) {
+    font-size: 14px;
+  }
+}
+
+
+a,
+button {
+  transition: $trans-delay;
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+a {
+  @extend %link-default;
+}
+
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+main {
+  @media (max-width: $xl) {
+    padding-top: 60px;
+  }
+}
+
+img {
+  max-width: 100%;
+  line-height: 1;
+}
+
+.visually-hidden {
+  @extend %visually-hidden;
+}
+
+
+
+// ANIMATIONS
+@keyframes opening {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes closing {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateX(-2px);
+  }
+
+  50% {
+    transform: translateX(4px);
+  }
+
+  75% {
+    transform: translateX(-4px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+.item-wrap {
+  margin-bottom: 30px;
+
+  @media (max-width: $md) {
+    margin-bottom: 20px;
+  }
+}
+
+.inactive {
+  display: none !important;
+}

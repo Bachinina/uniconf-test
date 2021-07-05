@@ -1,0 +1,222 @@
+.form {
+  padding: 35px;
+  border: 1px solid $color-blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 78px;
+    height: 78px;
+    background-color: black;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: linear-gradient(135deg, #14A5DA1F 50%, $color-white 50%), url(../../img/RSS.svg) no-repeat 10px 10px;
+
+    @media (max-width: $md) {
+      width: 48px;
+      height: 48px;
+      background-size: cover, 13px 13px;
+      background-position: center, 6px 6px;
+    }
+  }
+
+  @media (max-width: $md) {
+    padding: 30px 35px;
+  }
+}
+
+.form__container {
+  position: relative;
+  max-width: 570px;
+  width: 100%;
+  z-index: 1;
+}
+
+.form__title {
+  text-align: center;
+  margin-bottom: 50px;
+
+  @media (max-width: $md) {
+    margin-bottom: 35px;
+  }
+}
+
+.form__item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  input:not([type=checkbox]):not([type=radio]),
+  textarea {
+    width: 100%;
+    order: 1;
+  }
+
+  &+.form__item {
+    @media (max-width: $md) {
+      margin-top: 25px;
+    }
+  }
+}
+
+.form__row {
+  margin-bottom: 45px;
+
+  @media (max-width: $md) {
+    margin-bottom: 25px;
+  }
+}
+
+.form__submit {
+  width: 100%;
+  max-width: 270px;
+  text-transform: uppercase;
+
+  @media (max-width: $md) {
+    font-size: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.form__bottom {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+textarea {
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 90px;
+}
+
+input:not([type=checkbox]):not([type=radio]),
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  padding: 10px 20px;
+  background-color: $color-white;
+  border: 1px solid $color-blue;
+  border-radius: 4px;
+  color: $color-black;
+  line-height: 1;
+  font-size: 14px;
+  font-family: 'Montserrat';
+
+  &:focus {
+    background-color: #14A5DA1F;
+    outline: none;
+
+    &::placeholder {
+      opacity: 0;
+    }
+
+    &+.form__label {
+      opacity: 1;
+    }
+  }
+
+  &::placeholder {
+    transition: $trans-delay;
+    color: $color-gray;
+  }
+
+  &:not(:placeholder-shown) {
+    &+.form__label {
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: $md) {
+    padding: 10px 15px;
+    font-size: 10px;
+
+  }
+}
+
+.form__error,
+.form__label {
+  color: $color-black;
+  font-size: 12px;
+  line-height: 15px;
+  position: absolute;
+  bottom: calc(100% + 6px);
+  width: 100%;
+  padding: 0 20px;
+  transition: $trans-delay;
+
+  @media (max-width: $md) {
+    font-size: 8px;
+    line-height: 10px;
+    padding: 0 15px;
+    bottom: calc(100% + 4px);
+  }
+}
+
+.form__error {
+  display: none;
+  color: $color-orange
+}
+
+.form__label {
+  opacity: 0;
+}
+
+.form__item.invalid {
+
+  input,
+  textarea {
+    border-color: $color-orange;
+  }
+
+  .form__error {
+    display: block;
+  }
+
+  .form__label {
+    display: none;
+  }
+}
+
+
+.form-success {
+  margin-top: 20px;
+  color: #12a712;
+}
+
+.form-success-block {
+  box-shadow: 0px 0px 10px #00000029;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  img {
+    margin-bottom: 25px;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  p+p {
+    margin-top: 10px;
+  }
+
+  @media (max-width: $md) {
+    img {
+      margin-bottom: 15px;
+      max-width: 40px;
+      max-height: 40px
+    }
+  }
+}

@@ -1,0 +1,14 @@
+body {
+  min-width: 320px;
+  margin: 0 auto;
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: $color-black;
+  background-color: $color-white;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
