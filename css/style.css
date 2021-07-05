@@ -63,6 +63,10 @@ img {
   line-height: 1;
 }
 
+.ov-h {
+  overflow: hidden;
+}
+
 @-webkit-keyframes opening {
   from {
     opacity: 0;
