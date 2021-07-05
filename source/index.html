@@ -148,19 +148,18 @@
 
     <section>
       <div class="container container--content pt-0">
-        <form class="form" method="POST" action="http://httpbin.org/post" data-success="block-1">
+        <form class="form" method="POST" action="https://httpbin.org/post" data-success="block-1">
           <div class="form__container">
             <h2 class="form__title h3">Подпишитесь на рассылку</h2>
             <div class="form__row row">
               <div class="form__item col-12 col-md-6" data-form-el-wrap>
-                <input type="text" name="name" id="form1-name" autocomplete="off" placeholder="Имя" required
-                  data-form-el oninput="$('#user-name').text($(this).val())">
+                <input type="text" name="name" id="form1-name" placeholder="Имя" required data-form-el
+                  oninput="$('#user-name').text($(this).val())">
                 <label class="form__label" for="form1-name">Имя</label>
                 <span class="form__error" data-form-el-error>Заполните поле</span>
               </div>
               <div class="form__item col-12 col-md-6" data-form-el-wrap>
-                <input type="email" name="email" placeholder="example@mail.com" id="form1-email" autocomplete="off"
-                  required data-form-el>
+                <input type="email" name="email" placeholder="example@mail.com" id="form1-email" required data-form-el>
                 <label class="form__label" for="form1-email">Email</label>
                 <span class="form__error" data-form-el-error>Заполните поле</span>
               </div>

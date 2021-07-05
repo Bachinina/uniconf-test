@@ -28,12 +28,12 @@
   display: none;
   width: 30px;
   height: 30px;
-  background-image: url(../../img/burger.svg);
+  background-image: url(../img/burger.svg);
   background-repeat: no-repeat;
   background-position: center;
 
   &.active {
-    background-image: url(../../img/close.svg);
+    background-image: url(../img/close.svg);
 
     &+.header__nav-wrap {
       transform: translateX(0);

@@ -473,7 +473,7 @@ body {
   top: 0;
   left: 0;
   z-index: 1;
-  background: linear-gradient(135deg, #14A5DA1F 50%, #ffffff 50%), url(../../img/RSS.svg) no-repeat 10px 10px;
+  background: linear-gradient(135deg, #14A5DA1F 50%, #ffffff 50%), url(../img/RSS.svg) no-repeat 10px 10px;
 }
 @media (max-width: 767px) {
   .form::before {
@@ -950,12 +950,12 @@ textarea {
   display: none;
   width: 30px;
   height: 30px;
-  background-image: url(../../img/burger.svg);
+  background-image: url(../img/burger.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 .header__nav-btn.active {
-  background-image: url(../../img/close.svg);
+  background-image: url(../img/close.svg);
 }
 .header__nav-btn.active + .header__nav-wrap {
   -webkit-transform: translateX(0);

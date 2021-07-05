@@ -15,7 +15,7 @@
     top: 0;
     left: 0;
     z-index: 1;
-    background: linear-gradient(135deg, #14A5DA1F 50%, $color-white 50%), url(../../img/RSS.svg) no-repeat 10px 10px;
+    background: linear-gradient(135deg, #14A5DA1F 50%, $color-white 50%), url(../img/RSS.svg) no-repeat 10px 10px;
 
     @media (max-width: $md) {
       width: 48px;

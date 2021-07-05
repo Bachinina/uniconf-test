@@ -100,7 +100,7 @@ gulp.task("build", function (done) {
   );
 });
 
-gulp.task('deploy', function () {
-  return gulp.src("./source/**/*")
+gulp.task("deploy", function () {
+  return gulp.src("build/**/*")
     .pipe(deploy())
 });
