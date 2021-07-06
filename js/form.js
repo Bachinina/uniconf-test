@@ -11,15 +11,23 @@ forms.forEach(function (form) {
     const addValidation = function (el, errorBlock, wrap) {
       if (el.getAttribute('name') == 'name') {
         const regexName = /^\D+$/;
+        const setStandarttValidity = function () {
+          wrap.classList.remove('invalid');
+          errorBlock.textContent = 'Заполните поле';
+          el.setCustomValidity('');
+        };
+
         el.addEventListener('input', function () {
           if (!regexName.test(el.value)) {
-            wrap.classList.add('invalid');
-            errorBlock.textContent = 'Цифры в имени не допустимы';
-            el.setCustomValidity('Цифры в имени не допустимы');
+            if (el.value) {
+              wrap.classList.add('invalid');
+              errorBlock.textContent = 'Цифры в имени не допустимы';
+              el.setCustomValidity('Цифры в имени не допустимы');
+            } else {
+              setStandarttValidity();
+            }
           } else {
-            wrap.classList.remove('invalid');
-            errorBlock.textContent = 'Заполните поле';
-            el.setCustomValidity('');
+            setStandarttValidity();
           }
         });
       }
